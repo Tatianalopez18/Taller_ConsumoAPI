@@ -16,7 +16,7 @@ Proyecto básico para consultar el clima con JavaScript, HTML y CSS. La persona 
 **Estructura del proyecto:**
 
 
-## 3) Ejecución local
+## Ejecución local
 
 - doble clic a index.html.
 
