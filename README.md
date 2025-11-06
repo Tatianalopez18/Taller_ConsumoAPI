@@ -7,7 +7,7 @@ Proyecto básico para consultar el clima con JavaScript, HTML y CSS. La persona 
 - Open-Meteo Geocoding API (buscar lat/lon por nombre de ciudad).
 - Open-Meteo Forecast API (clima actual por lat/lon).
 
-## 2) Tecnologías y archivos usados
+## Tecnologías y archivos usados
 
 - HTML5: estructura de la página (index.html).
 - CSS3: estilos con modo claro usando variables (styles.css).
@@ -20,7 +20,7 @@ Proyecto básico para consultar el clima con JavaScript, HTML y CSS. La persona 
 
 - doble clic a index.html.
 
-## 4) Funcionamiento 
+## Funcionamiento 
 
 - El usuario escribe una ciudad y hace clic en Consultar clima.
 
@@ -29,9 +29,9 @@ Proyecto básico para consultar el clima con JavaScript, HTML y CSS. La persona 
 
 - Convierto `weather_code` a texto (“Nublado”, “Lluvia”, etc.) y muestro todo en pantalla.
 
-## 5) Código 
+## Código 
 
-### 5.1. Tomar datos del formulario
+### 1. Tomar datos del formulario
 const weatherForm = document.getElementById("weather-form");
 const weatherResult = document.getElementById("weather-result");
 
@@ -39,13 +39,13 @@ weatherForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 });
 
-### 5.2. Geocodificación
+### 2. Geocodificación
  const geoUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=1&language=es&format=json`;
 const geoResp = await fetch(geoUrl);
 const geoData = await geoResp.json();
 const place = geoData.results[0]; // { latitude, longitude, name, country, ... }
 
-### 5.3. Clima actual
+### 3. Clima actual
 const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${place.latitude}&longitude=${place.longitude}&current=temperature_2m,weather_code&timezone=auto`;
 const weatherResp = await fetch(weatherUrl);
 const weatherData = await weatherResp.json();
@@ -53,7 +53,7 @@ const weatherData = await weatherResp.json();
 const temp = weatherData.current.temperature_2m; // número en °C
 const code = weatherData.current.weather_code;   // ej: 3 = Nublado
 
-### 5.4. Render en el DOM
+### 4. Render en el DOM
 weatherResult.innerHTML = `
   <div class="card-out">
     <h3>${place.name}, ${place.country ?? ""}</h3>
