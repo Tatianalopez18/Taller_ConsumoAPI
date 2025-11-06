@@ -1,21 +1,13 @@
-# Clima por Ciudad (API Pública con fetch())
+# Clima por Ciudad (API Pública )
 
-Proyecto sencillo para consumir una API pública de clima usando JavaScript, HTML y CSS. El usuario escribe una ciudad, el sistema busca su latitud/longitud (geocodificación) y luego consulta la temperatura actual y una descripción del clima.
+Proyecto básico para consultar el clima con JavaScript, HTML y CSS. La persona escribe una ciudad y la aplicación primero consigue sus coordenadas y luego muestra la temperatura actual y una pequeña descripción del clima.
 
-**APIs usadas (sin API key):**
+**APIs usadas:**
 
 - Open-Meteo Geocoding API (buscar lat/lon por nombre de ciudad).
 - Open-Meteo Forecast API (clima actual por lat/lon).
 
-## 1) Objetivos de aprendizaje 
-
-- Entender cómo hacer peticiones HTTP GET con fetch() y async/await.
-- Convertir respuestas a JSON y extraer datos.
-- Mostrar resultados en el DOM (HTML) de forma clara.
-- Manejar errores (ciudad no encontrada, red).
-- Organizar un proyecto web estático y subirlo a Git.
-
-## 2) Tecnologías y archivos
+## 2) Tecnologías y archivos usados
 
 - HTML5: estructura de la página (index.html).
 - CSS3: estilos con modo claro usando variables (styles.css).
