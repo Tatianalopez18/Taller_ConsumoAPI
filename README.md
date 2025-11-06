@@ -16,11 +16,11 @@ Proyecto básico para consultar el clima con JavaScript, HTML y CSS. La persona 
 **Estructura del proyecto:**
 
 
-## 3) Cómo ejecutar en local
+## 3) Ejecución local
 
 - doble clic a index.html.
 
-## 4) Flujo de funcionamiento 
+## 4) Funcionamiento 
 
 - El usuario escribe una ciudad y hace clic en Consultar clima.
 
@@ -29,9 +29,9 @@ Proyecto básico para consultar el clima con JavaScript, HTML y CSS. La persona 
 
 - Convierto `weather_code` a texto (“Nublado”, “Lluvia”, etc.) y muestro todo en pantalla.
 
-## 5) Código explicado (resumen)
+## 5) Código 
 
-### 5.1. Escuchar el formulario
+### 5.1. Tomar datos del formulario
 const weatherForm = document.getElementById("weather-form");
 const weatherResult = document.getElementById("weather-result");
 
