@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clima — Consumo de API Pública (Open-Meteo)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <img class="logo" src="logo.png">
+    <h1>Clima actual por ciudad</h1>
+    <p class="subtitle">Ejemplo con <b>fetch()</b> usando la API pública de <a href="https://open-meteo.com/" target="_blank" rel="noreferrer">Open-Meteo</a></p>
+
+    <section class="card visible">
+      <form id="weather-form" class="form">
+        <label for="city">Ciudad</label>
+        <input id="city" name="city" type="text" placeholder="Ej: Bogotá, Madrid, Lima" required />
+        <button type="submit">Consultar clima</button>
+      </form>
+
+      <div id="weather-result" class="result"></div>
+    </section>
+
+    <footer class="footer">
+      <p>Creado por: Saira Tatiana Lopez Rodriguez - Estudiante Ingenieria de Sistemas</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

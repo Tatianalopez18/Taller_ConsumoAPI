@@ -1,0 +1,125 @@
+:root {
+  --bg-top: #ffffff;
+  --bg-bottom: #ffffff;    
+  --card: #ffffff;
+  --surface: #f7f9fc;    
+  --accent: #4a7dff;    
+  --text: #1c274c;         
+  --muted: #5d6b8c;       
+  --danger: #ff7f8f;
+  --shadow: 0 8px 24px rgba(0,0,0,0.12);
+  --border: rgba(0,0,0,0.12);
+  --border-soft: rgba(0,0,0,0.08);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: var(--text);
+  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 760px;
+  margin: 48px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.subtitle {
+  margin: 0 0 24px;
+  color: var(--muted);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.form {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+label {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+input, button {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border-soft);
+  background: #ffffff;           
+  color: var(--text);
+  transition: box-shadow .15s ease, transform .02s ease, border-color .15s ease;
+  outline: none;
+}
+
+input::placeholder { color: #7c88a8; opacity: .8; }
+
+input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(74, 125, 255, 0.22);
+}
+
+button {
+  background: linear-gradient(90deg, #6b95ff, #8fb3ff);
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover { filter: brightness(1.06); }
+button:active { transform: translateY(1px); }
+
+.result { margin-top: 8px; }
+
+.card-out {
+  background: var(--surface);     
+  border: 1px solid var(--border-soft);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.big { font-size: 24px; margin: 6px 0 0; }
+.muted { color: var(--muted); font-size: 13px; }
+
+.error {
+  background: rgba(220, 38, 38, 0.08);
+  border: 1px solid #fecaca;
+  color: #7f1d1d;
+  padding: 12px;
+  border-radius: 12px;
+}
+.footer {
+  margin-top: 18px;
+  color: var(--muted);
+}
+.footer a { color: var(--accent); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.brand h1 { margin: 0; font-size: 26px; }
+.brand .subtitle { margin-top: 4px; }
+.logo{
+  width: 180px;
+}
